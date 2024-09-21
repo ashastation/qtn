@@ -20,10 +20,13 @@
 	import { storePopup } from '@skeletonlabs/skeleton';
 
 	import ListInfoKeyValue from './lib/components/ListInfoKeyValue.svelte';
-	import PingAgent from './lib/components/PingAgent.svelte';
-	import WebSocketData from './lib/components/WebSocketData.svelte';
-	import GrafanaDashboard from './lib/components/GrafanaDashboard.svelte';
 	import WalletConnectEther from './lib/components/WalletConnectEther.svelte';
+
+	// rfq
+	import TableComponent from '../lib/components/TableComponent.svelte';
+	import FormComponent from '../lib/components/FormComponent.svelte';
+	import BestPrice from '../lib/components/BestPrice.svelte';
+
 	import Grid from 'svelte-grid';
 	import gridHelp from 'svelte-grid/build/helper/index.mjs';
 	import { popup } from '@skeletonlabs/skeleton';
@@ -44,9 +47,9 @@
 	const id = () => Math.random().toString(36).substr(2, 9);
 	const componentsMap = {
 		ListInfoKeyValue,
-		GrafanaDashboard,
-		WebSocketData,
-		PingAgent,
+		FormComponent,
+		BestPrice,
+		TableComponent,
 		WalletConnectEther
 	};
 
@@ -61,40 +64,8 @@
 			},
 			com: 'ListInfoKeyValue',
 			fixed: true,
-			canRemove: false
-		},
-		{
-			coordinates: {
-				x: 3,
-				y: 1,
-				w: 3,
-				h: 3
-			},
-			com: 'GrafanaDashboard',
-			fixed: false,
-			canRemove: true
-		},
-		{
-			coordinates: {
-				x: 0,
-				y: 5,
-				w: 12,
-				h: 12
-			},
-			com: 'WebSocketData',
-			fixed: false,
-			canRemove: true
-		},
-		{
-			coordinates: {
-				x: 0,
-				y: 4.5,
-				w: 10,
-				h: 1
-			},
-			com: 'PingAgent',
-			fixed: true,
-			canRemove: true
+			canRemove: false,
+			name: 'Trader Interface'
 		},
 		{
 			coordinates: {
@@ -106,6 +77,39 @@
 			com: 'WalletConnectEther',
 			fixed: true,
 			canRemove: false
+		},
+		{
+			coordinates: {
+				x: 3,
+				y: 1,
+				w: 3,
+				h: 3
+			},
+			com: 'FormComponent',
+			fixed: false,
+			canRemove: true
+		},
+		{
+			coordinates: {
+				x: 0,
+				y: 4.5,
+				w: 10,
+				h: 1
+			},
+			com: 'BestPrice',
+			fixed: true,
+			canRemove: true
+		},
+		{
+			coordinates: {
+				x: 0,
+				y: 5,
+				w: 12,
+				h: 12
+			},
+			com: 'TableComponent',
+			fixed: false,
+			canRemove: true
 		}
 	];
 

@@ -97,7 +97,8 @@
 			}),
 			id: id(),
 			com: componentsMap[item.com],
-			canRemove: item.canRemove
+			canRemove: item.canRemove,
+			name: item.name
 		};
 	});
 
@@ -123,7 +124,7 @@
 				✕
 			</span>
 		{/if}
-		<svelte:component this={dataItem.com}></svelte:component>
+		<svelte:component this={dataItem.com} name={dataItem.name}></svelte:component>
 	</Grid>
 </div>
 
