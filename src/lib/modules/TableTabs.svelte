@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import { TabGroup, Tab } from '@skeletonlabs/skeleton';
 
-	import TableComponent from '$lib/components/TableComponent.svelte';
+	import TableComponent from '../components/TableComponent.svelte';
 	import { getData } from '../actions';
 	import { PATH } from '../consts';
 	import { rfqDataMock } from '../mock';
