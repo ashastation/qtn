@@ -2,12 +2,10 @@
 import { URLS } from "./consts";
 
 export async function postData(path, payload) {
+    console.log(payload)
     const response = await fetch(`${URLS.BASE}${path}`, {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
+        body: payload
     });
 
     if (!response.ok) {
@@ -21,9 +19,6 @@ export async function postData(path, payload) {
 export async function getData(path) {
     const response = await fetch(`${URLS.BASE}${path}`, {
         method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        }
     });
 
     if (!response.ok) {

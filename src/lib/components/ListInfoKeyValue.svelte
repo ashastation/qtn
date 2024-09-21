@@ -8,8 +8,9 @@
 
 	async function fetchData() {
 		try {
-			const response = await fetch('http://localhost:5555/api/agent-info');
+			const response = await fetch('https://localhost:5555/api/agent-info');
 			agentInfo = await response.json();
+			console.log(agentInfo);
 		} catch (error) {
 			console.error('Error fetching data:', error);
 		}
